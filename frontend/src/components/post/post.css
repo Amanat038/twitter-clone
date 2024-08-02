@@ -1,0 +1,52 @@
+
+.profile-img-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.tweet-img-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.tweet-image-container {
+  width: 100%;
+  max-width: 600px; 
+  height: 400px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.tweet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .tweet-img-box {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+  }
+
+  .tweet-image-container {
+     width: 100%;
+     height: auto; 
+  }
+}

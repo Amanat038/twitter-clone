@@ -1,0 +1,141 @@
+/* Styles for larger screens */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+
+.logo-img{
+  width: 80px;
+  height: 80px;
+}
+
+.logo-img img{
+  width: 100%;
+  height: 100%;
+}
+/* Styles for smaller screens */
+@media (max-width: 850px) {
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .sidebar-sticky {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-item a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+  }
+
+  .logo-img{
+    display: none;
+  }
+  
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #e9ecef;
+  }
+
+            
+  }
+
+.sidebar-sticky {
+  flex-grow: 1;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #e9ecef;
+}
+
+.user-box{
+  position: relative;
+  bottom: 0px;
+
+ 
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #e9ecef;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.cursor {
+  cursor: pointer;
+}

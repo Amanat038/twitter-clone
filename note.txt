@@ -1,0 +1,76 @@
+1. First go to the mane folder ( twitter-app )=> [
+      1. to to backend folder => and run commented {npm i , nodemon index  }
+      2. to to frontend folder => and run commented {npm i , nodemon start }
+    ]
+
+2.  In this Project we will use MongoDB atlas .[
+    username => amanat
+    password => Vo5SuHNbprbcToPH
+]
+
+3. In this Project we have 2 different type of schema [
+
+      1. usermodules
+      2. postmodules
+
+    ]
+
+4. if you run the frontend side you will go to browser and see the login form if  user has already registered the user enter her email or password and login in application
+
+5. if you login successfully then you will see the home page [
+
+    1. Sidebar => {
+
+        sidebar has 3 options :{
+
+          A. home =>    [
+                          1. you see all other user posts in this application
+                          2.  create a new tweet
+                          3.  like tweets
+                          4. reply in tweets
+                          5. retweet in tweets
+                          6. and you can see the single tweet on click on the tweet or reply 
+                          7. if you click on the other user profile you can see ther profile on profile section
+                             you can follow and unfollow the other users in the profile section
+                          8. and you see the all comment in this tweets 
+
+                        ]
+
+          B. profile => [ you can see user information like => 
+                          name,username,following, followers, 
+                          following list of users and followers list of users you edit her profile ,
+
+                           ]
+
+
+
+
+          }
+          C. logOut => you will go to the login page
+        }
+     
+] 
+
+
+
+6. in this Project i use bootstrap framework to create a better { UI } 
+
+7. for routing  i used react-router-dom
+
+8. 
+
+
+
+
+here sum login email and password [
+
+
+  1.  Email => amanat@gmail.com 
+      password => amanat@121
+
+  2.  Email => ram@gmail.com
+      password => ram@121
+
+  2.  Email => vanshika@gmail.com
+      password => vanshika@121
+]
