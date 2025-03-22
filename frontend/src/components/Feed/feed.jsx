@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Modal, Form } from "react-bootstrap";
+import { Button, Modal, Form,Spinner } from "react-bootstrap";
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Swal from "sweetalert2";
@@ -16,6 +16,8 @@ const Feed = () => {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [allposts, setAllPosts] = useState([]);
+    const [loading, setLoading] = useState(false); 
+
 
   const CONFIG_OBJ = {
     headers: {
@@ -112,6 +114,7 @@ const Feed = () => {
   };
 
   const getAllPosts = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(`${API_BASE_URL}/allposts`);
       if (response.status === 200) {
@@ -121,6 +124,7 @@ const Feed = () => {
     } catch (error) {
       console.error("Error fetching posts:", error);
     }
+    setLoading(false);
   };
 
   const deletePost = async (postId) => {
@@ -152,7 +156,7 @@ const Feed = () => {
 
   useEffect(() => {
     getAllPosts();
-  });
+  },[]);
 
   return (
     <div className="feed-container">
@@ -204,10 +208,16 @@ const Feed = () => {
           </Modal.Footer>
         </Modal>
 
-        {allposts && allposts.length > 0 ? (
+       {loading ? ( 
+          <div className="text-center mt-3">
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </div>
+        ) : allposts.length > 0 ? (
           allposts.map((post) => (
             <div key={post._id}>
-              <Alltweets postData={post} deletePost={deletePost} retweetPost={retweetPost} />
+              <Alltweets postData={post} />
             </div>
           ))
         ) : (
